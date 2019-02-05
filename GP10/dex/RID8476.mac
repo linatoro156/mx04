@@ -1,0 +1,52 @@
+# DEXVERSION=DEX 8.00m076 2 2
+  MenuSelect title File entry 'Open Source Dictionary...' 
+  FileOpen file ':C:Archivos de programa/Great Plains Software/DEX10/ACA_RID/Dynamics.dic' type 0 
+ActivateWindow dictionary 'default'  form 'Main Menu' window 'DexUtils Toolbar' 
+  MoveTo field 'Toolbar Utilities Button' item 0 
+  ClickHit field 'Toolbar Utilities Button' item 6  # 'Extract' 
+NewActiveWin dictionary 'default'  form Extractor window Extractor 
+ActivateWindow dictionary 'default'  form Extractor window Extractor 
+  ClickHit field '(L) Extract Button' 
+  FileSave file ':C:Archivos de programa/Great Plains Software/DEX10/ACA_RID/Extract.dic' 
+NewActiveWin dictionary 'default'  form Extractor window Extractor 
+NewActiveWin dictionary 'default'  form Extractor window Extractor 
+  MenuSelect title File entry 'Close Source Dictionary' 
+  MenuSelect title File entry 'Open Editable Dictionary...' 
+  FileOpen file ':C:Archivos de programa/Great Plains Software/DEX10/ACA_RID/Extract.dic' type 0 
+ActivateWindow dictionary 'default'  form 'Main Menu' window 'DexUtils Toolbar' 
+  ClickHit field 'Toolbar Utilities Button' item 5  # 'Create Product Information' 
+NewActiveWin dictionary 'default'  form 'Product Res' window 'Product Resource' 
+ActivateWindow dictionary 'default'  form 'Product Res' window 'Product Resource' 
+  TypeTo field 'File Name' , 'DYNAMICS.SET'
+  MoveTo field 'Cluster ID' 
+  MoveTo field 'Product Name' 
+  MenuSelect title Edit entry Paste 
+  TypeTo field 'Product Name' , 'Reimputacion Imp. Dev.'
+  MoveTo field 'Product ID' 
+  TypeTo field 'Product ID' , '8476'
+  MoveTo field 'Form Dictionary' 
+  TypeTo field 'Form Dictionary' , 'F8476.DIC'
+  MoveTo field 'Report Dictionary' 
+  TypeTo field 'Report Dictionary' , 'R8476.DIC'
+  MoveTo field '(L) Compatiblity ID' 
+  MenuSelect title Edit entry Paste 
+  TypeTo field '(L) Compatiblity ID' , 'Reimputacion Imp. Dev.
+  MoveTo field '(L) Compatiblity Message' 
+  MenuSelect title Edit entry Paste 
+  TypeTo field '(L) Compatiblity Message' , 'Reimputacion Imp. Dev.
+  MoveTo field 'Ok Button' 
+  ClickHit field 'Ok Button' 
+ActivateWindow dictionary 'default'  form 'Main Menu' window 'DexUtils Toolbar' 
+  ClickHit field 'Toolbar Utilities Button' item 9  # 'Auto-Chunk' 
+NewActiveWin dictionary 'default'  form 'Auto Chunk' window 'Auto Chunk' 
+ActivateWindow dictionary 'default'  form 'Auto Chunk' window 'Auto Chunk' 
+  ClickHit field 'Lookup Button 3' 
+  FileSave file ':C:Archivos de programa/Great Plains Software/DEX10/ACA_RID/DXM8476.CNK' 
+  MoveTo field 'Dictionary Name' 
+  TypeTo field 'Dictionary Name' , 'RID8476.DIC'
+  MoveTo field 'Accounting Modules' item 0 
+  ClickHit field 'Accounting Modules' item 51  # 'Module 051' 
+  MoveTo field '(L) Major Version' 
+  TypeTo field '(L) Major Version' , '10'
+  MoveTo field '(L) Minor Version' 
+  MoveTo field '(L) Build Number' 
